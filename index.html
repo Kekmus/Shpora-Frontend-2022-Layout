@@ -12,28 +12,51 @@
         <div class="container header-container">
             <nav class="nav">
                 <div class="nav-dropdown">
-                    <button class="dropbtn regular-text">Первый тип врагов</button>
+                    <a class="droplink regular-text active-link" href="#">Первый тип врагов</a>
                     <div class="dropdown-content">
-                        <a class="regular-text" href="#">Враг 1.1</a>
-                        <a class="regular-text" href="#">Враг 1.2</a>
-                        <a class="regular-text" href="#">Враг 1.3</a>
+                        <a class="regular-text" href="#Blinky">Blinky</a>
+                        <a class="regular-text" href="#Pinky">Pinky</a>
+                        <a class="regular-text" href="#Inky">Inky</a>
+                        <a class="regular-text" href="#Clyde">Clyde</a>
                     </div>
                 </div>
                 <div class="nav-dropdown">
-                    <button class="dropbtn regular-text">Второй тип врагов</button>
+                    <a class="droplink regular-text unactive-link" href="enemies.html">Второй тип врагов</a>
                     <div class="dropdown-content">
                         <a class="regular-text" href="#">Враг 2.1</a>
                         <a class="regular-text" href="#">Враг 2.2</a>
                         <a class="regular-text" href="#">Враг 2.3</a>
+                        <a class="regular-text" href="#">Враг 2.4</a>
                     </div>
                 </div>
             </nav>
-            <input class="search regular-text" type="text" placeholder="Search..">
+            <input class="search regular-text" type="text" placeholder="Поиск...">
         </div>
     </header>
     <main class="main">
         <div class="container main-container">
-
+            <ul class="enemy-items">
+                <li class="enemy-item" id="Blinky">
+                    <p class="title-text" >Blinky</p>
+                    <p class="regular-text difficulty">Легкая сложность</p>
+                    <p class="regular-text">Преследователь</p>
+                </li>
+                <li class="enemy-item" id="Pinky">
+                    <p class="title-text">Pinky</p>
+                    <p class="regular-text difficulty">Легкая сложность</p>
+                    <p class="regular-text">Сидящий в засаде</p>
+                </li>
+                <li class="enemy-item" id="Inky">
+                    <p class="title-text">Inky</p>
+                    <p class="regular-text difficulty">Легкая сложность</p>
+                    <p class="regular-text">Капризный</p>
+                </li>
+                <li class="enemy-item" id="Clyde">
+                    <p class="title-text">Clyde</p>
+                    <p class="regular-text difficulty">Средняя сложность</p>
+                    <p class="regular-text">Притворяющийся дураком</p>
+                </li>
+            </ul>
         </div>
     </main>
     <footer class="footer">
