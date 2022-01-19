@@ -25,9 +25,22 @@ body {
     padding: 0;
 }
 
+.main {
+    margin: auto 0;
+}
+
 .container {
     max-width: 1080px;
     margin: 0 auto;
+}
+
+.title-text {
+    color: var(--main-text-color);
+    font-size: 32px;
+    line-height: 40px;
+    text-decoration: none;
+    font-family: 'Lab Grotesque', serif;
+    font-weight: 700;
 }
 
 .regular-text {
@@ -35,11 +48,8 @@ body {
     font-size: 18px;
     line-height: 24px;
     text-decoration: none;
-    font-family: 'Lab Grotesque';
-}
-
-.footer {
-    margin-top: auto;
+    font-family: 'Lab Grotesque', serif;
+    font-weight: 400;
 }
 
 .header-container {
@@ -58,33 +68,43 @@ body {
     gap: 32px;
 }
 
-.dropbtn {
+.droplink {
     background-color: white;
     padding: 8px;
     border: none;
     cursor: pointer;
 }
 
+.active-link {
+    border-radius: 8px;
+    background-color: var(--link-background);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--fon-1);
+    margin-top: 4px;
     width: 192px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: 0.3s linear;
 }
 
 .dropdown-content a {
     padding: 8px 8px;
     text-decoration: none;
     display: block;
+    transition: 0.3s linear;
 }
 
 
 .search {
     padding: 8px;
     border: none;
+    outline: none;
     margin-left: auto;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 24%);
 }
 
 .footer-container {
@@ -100,6 +120,35 @@ body {
     justify-content: flex-start;
     gap: 4px;
     padding: 8px;
+    transition: 0.3s linear;
+}
+
+.enemy-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    padding-left: 0;
+}
+
+.enemy-item {
+    list-style-type: none;
+    margin: 40px auto;
+    width: 400px;
+    height: 400px;
+    background-color: var(--fon-1);
+    border: 1px solid var(--fon-2);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.difficulty {
+    margin-top: 60%;
+}
+
+.unactive-link {
+    transition: 0.3s linear;
 }
 
 @font-face {
@@ -110,25 +159,42 @@ body {
          url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Regular.woff) format('woff');
 }
 
+@font-face {
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Bold.woff2) format('woff2'),
+         url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Bold.woff) format('woff');
+}
+
 @media (any-hover: hover) {
     .dropdown-content a:hover {
         border-radius: 8px;
         background-color: var(--link-focus);
         color: var(--main-text-dark-background);
-    }
-    
-    .nav-dropdown:hover .dropdown-content {
-        display: block;
-        border-radius: 8px;
+        transition: 0.1s linear;
     }
 
-    .nav-dropdown:hover .dropbtn {
-        background-color: var(--fon-1);
+    .nav-dropdown:hover .active-link + .dropdown-content {
+        display: block;
         border-radius: 8px;
+        transition: 0.1s linear;
+    }
+
+    .nav-dropdown:hover .unactive-link {
+        background-color: var(--link-focus);
+        color: var(--main-text-dark-background);
+        border-radius: 8px;
+        transition: 0.1s linear;
     }
 
     .footer-content:hover {
         background-color: var(--fon-1);
         border-radius: 8px;
+        transition: 0.1s linear;
+    }
+
+    .search:hover {
+        box-shadow: 0 1px 0 0 rgb(0 0 0 / 40%);
     }
 }
