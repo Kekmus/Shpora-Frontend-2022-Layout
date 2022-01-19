@@ -1,3 +1,134 @@
+:root {
+    --main-text-color: #222222;
+    --additional-text-color: #858585;
+    --unactive-text-color: #ADADAD;
+    --main-text-dark-background: #FFFFFF;
+    --link-background: #CDEDFF;
+    --link-focus: #1F87EF;
+    --link-icons: #1874CF;
+    --fon-1: #F2F2F2;
+    --fon-2: #EBEBEB;
+    --split-line: #E5E5E5;
+}
+
+
 * {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.regular-text {
+    color: var(--main-text-color);
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    font-family: 'Lab Grotesque';
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.header-container {
+    border-bottom: 1px solid var(--split-line);
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+}
+
+.footer-container {
+    padding: 16px 8px;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+}
+
+.dropbtn {
+    background-color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--fon-1);
+    width: 192px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.search {
+    padding: 8px;
+    border: none;
+    margin-left: auto;
+}
+
+.footer-container {
+    display: flex;
+    cursor: pointer;
+    border-top: 1px solid var(--split-line);
+    margin-right: auto;
+}
+
+.footer-content {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 8px;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Regular.woff2) format('woff2'),
+         url(https://s.kontur.ru/common-v2/fonts/LabGrotesque/LabGrotesque-Regular.woff) format('woff');
+}
+
+@media (any-hover: hover) {
+    .dropdown-content a:hover {
+        border-radius: 8px;
+        background-color: var(--link-focus);
+        color: var(--main-text-dark-background);
+    }
     
+    .nav-dropdown:hover .dropdown-content {
+        display: block;
+        border-radius: 8px;
+    }
+
+    .nav-dropdown:hover .dropbtn {
+        background-color: var(--fon-1);
+        border-radius: 8px;
+    }
+
+    .footer-content:hover {
+        background-color: var(--fon-1);
+        border-radius: 8px;
+    }
 }
